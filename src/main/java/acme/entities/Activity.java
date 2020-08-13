@@ -4,6 +4,7 @@ package acme.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -50,5 +51,10 @@ public class Activity extends DomainEntity {
 
 	@URL
 	private String				webLinks;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private InvestmentRound		investmentRound;
 
 }

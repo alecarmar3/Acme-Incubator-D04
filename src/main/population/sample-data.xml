@@ -308,5 +308,254 @@
 		<property name="expirationDate" value="12/20"/>
 		<property name="cvv" value="466"/>
 	</bean>
+	
+		<!-- Bookkeepers -->
+	
+	<bean name="bookkeeper1" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="Firm name 1"/>
+		<property name="responsibilityStatement" value="This is the responsibility statement 1"/>
+	</bean>
+	
+	<bean name="bookkeeper2" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="Firm name 2"/>
+		<property name="responsibilityStatement" value="This is the responsibility statement 2"/>
+	</bean>
+	
+	<bean name="bookkeeper3" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="Firm name 3"/>
+		<property name="responsibilityStatement" value="This is the responsibility statement 3"/>
+	</bean>
+	
+	<bean name="bookkeeper4" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="Firm name 4"/>
+		<property name="responsibilityStatement" value="This is the responsibility statement 4"/>
+	</bean>
+	
+		<!-- Entrepreneurs -->
+	
+	<bean name="entrepreneur1" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Cachibache"/>
+		<property name="activitySector" value="Arts"/>
+		<property name="qualificationRecord" value="I am qualificated because..."/>
+		<property name="skillsRecord" value="I can pretty much do anything"/>
+	</bean>
+	
+	<bean name="entrepreneur2" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Machacochi"/>
+		<property name="activitySector" value="Bussines"/>
+		<property name="qualificationRecord" value="Most people say I am..."/>
+		<property name="skillsRecord" value="My main skill is that I can handdle so much preasure..."/>
+	</bean>
+	
+	<bean name="entrepreneur3" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Piño"/>
+		<property name="activitySector" value="Health"/>
+		<property name="qualificationRecord" value="Among my qualification records you can see that..."/>
+		<property name="skillsRecord" value="In this sector I have been developing a serie of skills..."/>
+	</bean>
+	
+		<!-- Investors -->
+	
+	<bean name="investor1" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Firm name 5"/>
+		<property name="activitySector" value="Science"/>
+		<property name="profile" value="Risky"/>
+	</bean>
+	
+	<bean name="investor2" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Firm name 6"/>
+		<property name="activitySector" value="Business"/>
+		<property name="profile" value="Moderate"/>
+	</bean>
+	
+	<bean name="investor3" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Firm name 7"/>
+		<property name="activitySector" value="Technology"/>
+		<property name="profile" value="Confident"/>
+	</bean>
+	
+		<!-- AccountingRecords -->
+	
+	<bean name="accountingRecord1" class="acme.entities.AccountingRecord">
+		<property name="title" value="Title 1"/>
+		<property name="status">
+			<value>DRAFT</value>
+		</property>
+		<property name="creationDate" value="2019/01/25 12:00"/>
+		<property name="body" value="Body 1"/>
+		<property name="bookkeeper" ref="bookkeeper2"/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+	<bean name="accountingRecord2" class="acme.entities.AccountingRecord">
+		<property name="title" value="Title 2"/>
+		<property name="status">
+			<value>DRAFT</value>
+		</property>
+		<property name="creationDate" value="2020/06/17 18:30"/>
+		<property name="body" value="Body 2"/>
+		<property name="bookkeeper" ref="bookkeeper1"/>
+		<property name="investmentRound" ref="investmentRound1"/>
+	</bean>
+	
+	<bean name="accountingRecord3" class="acme.entities.AccountingRecord">
+		<property name="title" value="Title 3"/>
+		<property name="status">
+			<value>PUBLISHED</value>
+		</property>
+		<property name="creationDate" value="2019/11/19 8:30"/>
+		<property name="body" value="Body 3"/>
+		<property name="bookkeeper" ref="bookkeeper2"/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+		<!-- Applications -->
+	
+	<bean name="application1" class="acme.entities.Application">
+		<property name="ticker" value="GTF-98-246901"/>
+		<property name="creationDate" value="2020/03/14 15:10"/>
+		<property name="statement" value="Statement 1"/>
+		<property name="investmentMoneyOffer" value="1300 EUR"/>
+		<property name="investor" ref="investor1"/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+	<bean name="application2" class="acme.entities.Application">
+		<property name="ticker" value="GTF-51-528933"/>
+		<property name="creationDate" value="2019/09/14 19:50"/>
+		<property name="statement" value="Statement 2"/>
+		<property name="investmentMoneyOffer" value="6853 EUR"/>
+		<property name="investor" ref="investor2"/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+	<bean name="application3" class="acme.entities.Application">
+		<property name="ticker" value="GTF-93-393614"/>
+		<property name="creationDate" value="2020/10/14 10:30"/>
+		<property name="statement" value="Statement 3"/>
+		<property name="investmentMoneyOffer" value="865 EUR"/>
+		<property name="investor" ref="investor3"/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+	<bean name="application4" class="acme.entities.Application">
+		<property name="ticker" value="HSC-12-128733"/>
+		<property name="creationDate" value="2018/12/06 11:40"/>
+		<property name="statement" value="Statement 4"/>
+		<property name="investmentMoneyOffer" value="3971 EUR"/>
+		<property name="investor" ref="investor1"/>
+		<property name="investmentRound" ref="investmentRound1"/>
+	</bean>
+	
+		<!-- Messages -->
+	
+	<bean name="message1" class="acme.entities.Message">
+		<property name="title" value="Message for jose"/>
+		<property name="ceationDate" value="2020/06/27 13:34"/>
+		<property name="tags" value="urgent, work, cooperative"/>
+		<property name="body" value="hey, jose..."/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+	<bean name="message2" class="acme.entities.Message">
+		<property name="title" value="Message for maria"/>
+		<property name="ceationDate" value="2020/07/02 16:14"/>
+		<property name="tags" value="books, information"/>
+		<property name="body" value="hey, maria could you please..."/>
+		<property name="investmentRound" ref="investmentRound1"/>
+	</bean>
+	
+	<bean name="message3" class="acme.entities.Message">
+		<property name="title" value="Message for noelia"/>
+		<property name="ceationDate" value="2020/05/17 21:45"/>
+		<property name="tags" value="meeting"/>
+		<property name="body" value="hey, noelia did you realise of..."/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+	<bean name="message4" class="acme.entities.Message">
+		<property name="title" value="Message for luis"/>
+		<property name="ceationDate" value="2019/11/08 18:55"/>
+		<property name="tags" value=""/>
+		<property name="body" value="hey, luis I was asked..."/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+		<!-- Activities -->
+	
+	<bean name="activity1" class="acme.entities.Activity">
+		<property name="title" value="Activity 1"/>
+		<property name="startDate" value="2019/12/22 8:00"/>
+		<property name="endDate" value="2021/12/22 15:00"/>
+		<property name="budget" value="50000 EUR"/>
+		<property name="body" value="The body 1"/>
+		<property name="webLinks" value=""/>
+		<property name="investmentRound" ref="investmentRound3"/>
+	</bean>
+	
+	<bean name="activity2" class="acme.entities.Activity">
+		<property name="title" value="Activity 2"/>
+		<property name="startDate" value="2019/06/01 8:00"/>
+		<property name="endDate" value="2020/01/15 15:00"/>
+		<property name="budget" value="20500 EUR"/>
+		<property name="body" value="The body 2"/>
+		<property name="webLinks" value="http://www.tiryon.com"/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+	<bean name="activity3" class="acme.entities.Activity">
+		<property name="title" value="Activity 3"/>
+		<property name="startDate" value="2020/07/08 8:00"/>
+		<property name="endDate" value="2020/10/07 15:00"/>
+		<property name="budget" value="35000 EUR"/>
+		<property name="body" value="The body 3"/>
+		<property name="webLinks" value=""/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+	<bean name="activity4" class="acme.entities.Activity">
+		<property name="title" value="Activity 4"/>
+		<property name="startDate" value="2021/05/10 8:00"/>
+		<property name="endDate" value="2021/06/10 15:00"/>
+		<property name="budget" value="3000 EUR"/>
+		<property name="body" value="The body 4"/>
+		<property name="webLinks" value="http://www.activity4.com, http://www.look.com"/>
+		<property name="investmentRound" ref="investmentRound1"/>
+	</bean>
+	
+		<!-- InvestmentRounds -->
+	
+	<bean name="investmentRound1" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="YGT-49-744828"/>
+		<property name="creationDate" value="2019/03/11 14:00"/>
+		<property name="kindOfRound" value="Angel"/>
+		<property name="title" value="Investment round 1"/>
+		<property name="description" value="This is the investment round 1"/>
+		<property name="amountOfMoney" value="4511 EUR"/>
+		<property name="additionalInfo" value=""/>
+		<property name="entrepreneur" ref="entrepreneur1"/>
+	</bean>
+	
+	<bean name="investmentRound2" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="LKN-62-536991"/>
+		<property name="creationDate" value="2020/02/01 9:00"/>
+		<property name="kindOfRound" value="Series-C"/>
+		<property name="title" value="Investment round 2"/>
+		<property name="description" value="This is the investment round 2"/>
+		<property name="amountOfMoney" value="6533 EUR"/>
+		<property name="additionalInfo" value=""/>
+		<property name="entrepreneur" ref="entrepreneur3"/>
+	</bean>
+	
+	<bean name="investmentRound3" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="RRQ-614209"/>
+		<property name="creationDate" value="2018/10/24 10:00"/>
+		<property name="kindOfRound" value="SEED"/>
+		<property name="title" value="Investment round 3"/>
+		<property name="description" value="This is the investment round 3"/>
+		<property name="amountOfMoney" value="90050 EUR"/>
+		<property name="additionalInfo" value=""/>
+		<property name="entrepreneur" ref="entrepreneur1"/>
+	</bean>
 
 </beans>
