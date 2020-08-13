@@ -66,10 +66,14 @@ master.menu.administrator.toolRecord.create = Create tool record
 master.menu.administrator.challenge.list = List challenges
 master.menu.administrator.challenge.create = Create challenge
 master.menu.administrator.banner.list = List banners
-master.menu.administrator.banner.create = Create banner
 master.menu.administrator.dashboard.show = Show dashboard
 master.menu.administrator.configuration.show = Show configuration
 master.menu.administrator.shutdown = Shut down
+
+# master.menu.patron ###################################################
+
+master.menu.administrator.banner.list = List banners
+master.menu.administrator.banner.create = Create banners
 
 # master.menu.provider ########################################################
 

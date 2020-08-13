@@ -66,10 +66,14 @@ master.menu.administrator.toolRecord.create = Crear registro de herramienta
 master.menu.administrator.challenge.list = Listar desafíos
 master.menu.administrator.challenge.create = Crear desafío
 master.menu.administrator.banner.list = Listar anuncios
-master.menu.administrator.banner.create = Crear anuncio
 master.menu.administrator.dashboard.show = Mostrar estadísticas
 master.menu.administrator.configuration.show = Mostrar configuración
 master.menu.administrator.shutdown = Parar el sistema
+
+# master.menu.patron ###################################################
+
+master.menu.administrator.banner.list = Listar anuncios
+master.menu.administrator.banner.create = Crear anuncios
 
 # master.menu.provider ########################################################
 

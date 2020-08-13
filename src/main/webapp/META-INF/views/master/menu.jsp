@@ -55,11 +55,15 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
 			<acme:menu-suboption code="master.menu.administrator.banner.list" action="/administrator/banner/list"/>
-			<acme:menu-suboption code="master.menu.administrator.banner.create" action="/administrator/banner/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard.show" action="/administrator/dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.configuration.show" action="/administrator/configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
+			<acme:menu-suboption code="master.menu.patron.banner.list" action="/patron/banner/list"/>
+			<acme:menu-suboption code="master.menu.patron.banner.create" action="/patron/banner/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
