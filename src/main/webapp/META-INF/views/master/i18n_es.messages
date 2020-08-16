@@ -45,9 +45,10 @@ master.menu.authenticated.bulletin.create = Crear boletín
 master.menu.authenticated.notice.list = Listar comunicados
 master.menu.authenticated.technology-record.list = Listar registros de tecnología
 master.menu.authenticated.tool-record.list = Listar registros de herramientas
-master.menu.authenticated.inquiries.list = Listar investigaciones
-master.menu.authenticated.overtures.list = Listar propuestas
-master.menu.authenticated.challenges.list = Listar desafíos
+master.menu.authenticated.inquiry.list = Listar investigaciones
+master.menu.authenticated.overture.list = Listar propuestas
+master.menu.authenticated.challenge.list = Listar desafíos
+master.menu.authenticated.investmentRound.listMine = Listar mis foros
 
 # master.menu.administrator ###################################################
 
@@ -70,10 +71,16 @@ master.menu.administrator.dashboard.show = Mostrar estadísticas
 master.menu.administrator.configuration.show = Mostrar configuración
 master.menu.administrator.shutdown = Parar el sistema
 
-# master.menu.patron ###################################################
+# master.menu.entrepreneur ########################################################
 
-master.menu.administrator.banner.list = Listar anuncios
-master.menu.administrator.banner.create = Crear anuncios
+master.menu.entrepreneur = Emprendedor
+master.menu.entrepreneur.investmentRound.list = Listar rondas de inversión
+master.menu.entrepreneur.application.list = Listar aplicaciones
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Inversor
+master.menu.investor.application.list = Listar aplicaciones
 
 # master.menu.provider ########################################################
 

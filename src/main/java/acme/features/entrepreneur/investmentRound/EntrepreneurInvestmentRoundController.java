@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investmentRound;
+package acme.features.entrepreneur.investmentRound;
 
 import javax.annotation.PostConstruct;
 
@@ -9,27 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
 import acme.entities.InvestmentRound;
+import acme.entities.roles.Entrepreneur;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/investment-round/")
-public class AuthenticatedInvestmentRoundController extends AbstractController<Authenticated, InvestmentRound> {
+@RequestMapping("/entrepreneur/investment-round/")
+public class EntrepreneurInvestmentRoundController extends AbstractController<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	private AuthenticatedInvestmentRoundListActiveService	listActiveService;
+	private EntrepreneurInvestmentRoundListMineService	listMineService;
 
 	@Autowired
-	private AuthenticatedInvestmentRoundListMineService		listMineService;
-
-	@Autowired
-	private AuthenticatedInvestmentRoundShowService			showService;
+	private EntrepreneurInvestmentRoundShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_ACTIVE, BasicCommand.LIST, this.listActiveService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}

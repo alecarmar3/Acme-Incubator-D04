@@ -41,6 +41,9 @@ public class Application extends DomainEntity {
 	@Past
 	private Date				creationDate;
 
+	@NotNull
+	private ApplicationStatus	status;
+
 	@NotBlank
 	private String				statement;
 

@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.investmentRound;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,18 +10,20 @@ import acme.entities.InvestmentRound;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Principal;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInvestmentRoundShowService implements AbstractShowService<Authenticated, InvestmentRound> {
+public class AuthenticatedInvestmentRoundListMineService implements AbstractListService<Authenticated, InvestmentRound> {
 
 	@Autowired
-	private AuthenticatedInvestmentRoundRepository repository;
+	AuthenticatedInvestmentRoundRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
+
 		return true;
 	}
 
@@ -29,18 +33,21 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationDate", "kindOfRound", "title", "description", "amountOfMoney", "additionalInfo", "entrepreneur.userAccount.username");
+		request.unbind(entity, model, "ticker", "kindOfRound", "title", "amountOfMoney");
 	}
 
 	@Override
-	public InvestmentRound findOne(final Request<InvestmentRound> request) {
+	public Collection<InvestmentRound> findMany(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		InvestmentRound result;
-		int id;
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		Collection<InvestmentRound> result;
+
+		Principal principal = request.getPrincipal();
+		int id = principal.getAccountId();
+
+		//result = this.repository.findMyInvestmentRounds(id);
+		result = this.repository.findMyInvestmentRounds(id);
+
 		return result;
 	}
-
 }

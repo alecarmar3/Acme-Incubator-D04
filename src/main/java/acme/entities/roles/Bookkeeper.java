@@ -23,6 +23,6 @@ public class Bookkeeper extends UserRole {
 	private String				firmName;
 
 	@NotBlank
-	private String				responsabilityStatement;
+	private String				responsibilityStatement;
 
 }

@@ -1,20 +1,20 @@
 
-package acme.features.authenticated.investmentRound;
+package acme.features.entrepreneur.investmentRound;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.InvestmentRound;
+import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedInvestmentRoundShowService implements AbstractShowService<Authenticated, InvestmentRound> {
+public class EntrepreneurInvestmentRoundShowService implements AbstractShowService<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	private AuthenticatedInvestmentRoundRepository repository;
+	private EntrepreneurInvestmentRoundRepository repository;
 
 
 	@Override

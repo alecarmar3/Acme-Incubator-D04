@@ -64,4 +64,22 @@ public class InvestmentRound extends DomainEntity {
 	@ManyToOne(optional = false)
 	private Entrepreneur		entrepreneur;
 
+	//Este método hay que implementarlo en los Create/Update Services del siguientre entregable
+
+	//	public boolean validTicker() {
+	//
+	//		boolean firstPart, secondPart;
+	//
+	//		String SSS = this.ticker.substring(0, 3);
+	//		String YY = this.ticker.substring(4, 6);
+	//
+	//		String FirstThreeActivitySector = this.entrepreneur.getActivitySector().substring(0, 3);
+	//		String LastTwoCreationYear = this.creationDate.toString().substring(8, 10);
+	//
+	//		firstPart = SSS.equals(FirstThreeActivitySector);
+	//		secondPart = YY.equals(LastTwoCreationYear);
+	//
+	//		return firstPart == true && secondPart == true;
+	//	}
+
 }
