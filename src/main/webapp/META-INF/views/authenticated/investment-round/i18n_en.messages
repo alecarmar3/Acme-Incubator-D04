@@ -17,5 +17,6 @@ authenticated.investmentRound.label.amountOfMoney = Amount of money
 authenticated.investmentRound.label.additionalInfo = Additional information
 authenticated.investmentRound.label.entrepreneur = Entrepreneur
 
+authenticated.investmentRound.accountingRecords = List Accounting records
 authenticated.investmentRound.button.getMessages = See messages
 authenticated.investmentRound.button.return = Return

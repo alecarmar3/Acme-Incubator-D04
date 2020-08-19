@@ -77,6 +77,13 @@ master.menu.entrepreneur = Emprendedor
 master.menu.entrepreneur.investmentRound.list = Listar rondas de inversión
 master.menu.entrepreneur.application.list = Listar aplicaciones
 
+
+# master.menu.bookkeeper ########################################################
+
+master.menu.bookkeeper = Contable
+master.menu.bookkeeper.investmentRound.list.written = Listar mis rondas de investigación escritas
+master.menu.bookkeeper.investmentRound.list.notWritten = Listar otras rondas de investigación
+
 # master.menu.investor ########################################################
 
 master.menu.investor = Inversor

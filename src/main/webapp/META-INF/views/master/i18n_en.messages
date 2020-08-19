@@ -78,6 +78,12 @@ master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investmentRound.list = List investment rounds
 master.menu.entrepreneur.application.list = List applications
 
+# master.menu.bookkeeper ########################################################
+
+master.menu.bookkeeper = Bookkeeper
+master.menu.bookkeeper.investmentRound.list.written = List my written investment rounds
+master.menu.bookkeeper.investmentRound.list.notWritten = List others investment rounds
+
 # master.menu.investor ########################################################
 
 master.menu.investor = Investor

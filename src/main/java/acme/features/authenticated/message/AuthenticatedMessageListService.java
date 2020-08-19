@@ -62,4 +62,8 @@ public class AuthenticatedMessageListService implements AbstractListService<Auth
 
 		return result;
 	}
+
+	public void onSuccess() {
+
+	}
 }

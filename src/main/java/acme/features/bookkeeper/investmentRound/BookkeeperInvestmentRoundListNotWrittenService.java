@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investmentRound;
+package acme.features.bookkeeper.investmentRound;
 
 import java.util.Collection;
 
@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.InvestmentRound;
+import acme.entities.roles.Bookkeeper;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInvestmentRoundListMineService implements AbstractListService<Authenticated, InvestmentRound> {
+public class BookkeeperInvestmentRoundListNotWrittenService implements AbstractListService<Bookkeeper, InvestmentRound> {
 
 	@Autowired
-	AuthenticatedInvestmentRoundRepository repository;
+	BookkeeperInvestmentRoundRepository repository;
 
 
 	@Override
@@ -45,7 +45,7 @@ public class AuthenticatedInvestmentRoundListMineService implements AbstractList
 		Principal principal = request.getPrincipal();
 		int id = principal.getAccountId();
 
-		result = this.repository.findMyInvestmentRounds(id);
+		result = this.repository.findNotWrittenInvestmentRounds(id);
 
 		return result;
 	}
