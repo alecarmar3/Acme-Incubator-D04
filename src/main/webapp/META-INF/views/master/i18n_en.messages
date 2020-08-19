@@ -45,9 +45,11 @@ master.menu.authenticated.bulletin.create = Create bulletin
 master.menu.authenticated.notice.list = List notices
 master.menu.authenticated.technology-record.list = List technology records
 master.menu.authenticated.tool-record.list = List tool records
-master.menu.authenticated.inquiries.list = List inquiries
-master.menu.authenticated.overtures.list = List overtures
-master.menu.authenticated.challenges.list = List challenges
+master.menu.authenticated.inquiry.list = List inquiries
+master.menu.authenticated.overture.list = List overtures
+master.menu.authenticated.challenge.list = List challenges
+master.menu.authenticated.investmentRound.list = List investment rounds
+master.menu.authenticated.investmentRound.listMine = List my forums
 
 # master.menu.administrator ###################################################
 
@@ -66,10 +68,26 @@ master.menu.administrator.toolRecord.create = Create tool record
 master.menu.administrator.challenge.list = List challenges
 master.menu.administrator.challenge.create = Create challenge
 master.menu.administrator.banner.list = List banners
-master.menu.administrator.banner.create = Create banner
 master.menu.administrator.dashboard.show = Show dashboard
 master.menu.administrator.configuration.show = Show configuration
 master.menu.administrator.shutdown = Shut down
+
+# master.menu.entrepreneur ########################################################
+
+master.menu.entrepreneur = Entrepreneur
+master.menu.entrepreneur.investmentRound.list = List investment rounds
+master.menu.entrepreneur.application.list = List applications
+
+# master.menu.bookkeeper ########################################################
+
+master.menu.bookkeeper = Bookkeeper
+master.menu.bookkeeper.investmentRound.list.written = List my written investment rounds
+master.menu.bookkeeper.investmentRound.list.notWritten = List others investment rounds
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Investor
+master.menu.investor.application.list = List applications
 
 # master.menu.provider ########################################################
 

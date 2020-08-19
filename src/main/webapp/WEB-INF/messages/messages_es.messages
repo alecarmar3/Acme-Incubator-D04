@@ -20,6 +20,7 @@ default.placeholder.url = http://www.acme.com
 
 default.banner.error.expiration-date-pattern = Formato de fecha de validez incorrecto
 default.banner.error.cvv-pattern = Formato de CVV incorrecto
+default.error.ticker-pattern = Formato de identificador incorrecto
 default.error.conversion = Valor incorrecto
 default.error.endpoint-unavailable = End-point no disponible
 default.error.not-authorised = Acceso no autorizado
