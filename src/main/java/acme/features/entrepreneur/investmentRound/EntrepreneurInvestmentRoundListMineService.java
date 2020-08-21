@@ -47,6 +47,8 @@ public class EntrepreneurInvestmentRoundListMineService implements AbstractListS
 
 		result = this.repository.findMyInvestmentRounds(id);
 
+		result.stream().forEach(x -> x.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(x.getId())));
+
 		return result;
 	}
 }

@@ -645,6 +645,28 @@
 		<property name="investmentRound" ref="investmentRound2"/>
 	</bean>
 	
+	<bean name="accountingRecord4" class="acme.entities.AccountingRecord">
+		<property name="title" value="Title 4"/>
+		<property name="status">
+			<value>PUBLISHED</value>
+		</property>
+		<property name="creationDate" value="2020/07/11 7:30"/>
+		<property name="body" value="Body 4"/>
+		<property name="bookkeeper" ref="bookkeeper1"/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
+	<bean name="accountingRecord5" class="acme.entities.AccountingRecord">
+		<property name="title" value="Title 5"/>
+		<property name="status">
+			<value>DRAFT</value>
+		</property>
+		<property name="creationDate" value="2020/07/11 7:30"/>
+		<property name="body" value="Body 5"/>
+		<property name="bookkeeper" ref="bookkeeper2"/>
+		<property name="investmentRound" ref="investmentRound2"/>
+	</bean>
+	
 		<!-- Applications -->
 	
 	<bean name="application1" class="acme.entities.Application">
@@ -779,7 +801,7 @@
 		<property name="kindOfRound" value="Angel"/>
 		<property name="title" value="Investment round 1"/>
 		<property name="description" value="This is the investment round 1"/>
-		<property name="amountOfMoney" value="4511 EUR"/>
+		<property name="amountOfMoney" value="4511d"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur1"/>
 	</bean>
@@ -790,7 +812,7 @@
 		<property name="kindOfRound" value="Series-C"/>
 		<property name="title" value="Investment round 2"/>
 		<property name="description" value="This is the investment round 2"/>
-		<property name="amountOfMoney" value="6533 EUR"/>
+		<property name="amountOfMoney" value="6533d"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur3"/>
 	</bean>
@@ -801,7 +823,7 @@
 		<property name="kindOfRound" value="SEED"/>
 		<property name="title" value="Investment round 3"/>
 		<property name="description" value="This is the investment round 3"/>
-		<property name="amountOfMoney" value="90050 EUR"/>
+		<property name="amountOfMoney" value="90050d"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur1"/>
 	</bean>

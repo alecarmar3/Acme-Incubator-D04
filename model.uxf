@@ -686,7 +686,7 @@ InvestmentRound
 + kindOfRound: String {NotBlank}
 + title: String {NotBlank}
 + description: String {NotBlank}
-+ amountOfMoney: Money {NotNull, Valid}
++ amountOfMoney: Double {NotNull}
 + additionalInfo: String {URL}
 + entrepreneur: Entrepreneur {NotNull, Valid, ManyToOne}</panel_attributes>
     <additional_attributes/>

@@ -19,7 +19,6 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.roles.Entrepreneur;
-import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -58,8 +57,7 @@ public class InvestmentRound extends DomainEntity {
 	private String				description;
 
 	@NotNull
-	@Valid
-	private Money				amountOfMoney;
+	private Double				amountOfMoney;
 
 	@URL
 	private String				additionalInfo;

@@ -26,6 +26,7 @@
 	<acme:form-textbox code="authenticated.investmentRound.label.entrepreneur" path="entrepreneur.userAccount.username"/>
 	
 	<acme:form-submit code="authenticated.investmentRound.accountingRecords" method="get" action="/authenticated/accounting-record/list-its?id=${id}"/>
+	<acme:form-submit code="authenticated.investmentRound.workProgramme" method="get" action="/authenticated/activity/list?id=${id}"/>
 	<acme:form-submit code="authenticated.investmentRound.button.getMessages" method="get" action="/authenticated/message/list?id=${id}"/>
   	<acme:form-return code="authenticated.investmentRound.button.return"/>
 </acme:form>

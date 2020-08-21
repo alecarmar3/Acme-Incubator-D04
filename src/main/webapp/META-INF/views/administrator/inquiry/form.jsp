@@ -27,7 +27,7 @@
 	
 	<acme:form-moment code="administrator.inquiry.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.inquiry.form.label.body" path="body"/>
-	<acme:form-money code="administrator.inquiry.form.label.money-min" path="moneyMin"/>
+	<acme:form-textbox code="administrator.inquiry.form.label.money-min" path="moneyMin"/>
 	<acme:form-money code="administrator.inquiry.form.label.money-max" path="moneyMax"/>
 	<acme:form-textbox code="administrator.inquiry.form.label.email" path="email"/>
 	
