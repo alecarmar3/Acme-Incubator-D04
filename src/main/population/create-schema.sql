@@ -317,9 +317,6 @@ create index IDXa91bud5njtdgbcs992l3fc8dl on `application` (`investor_id`);
 
     alter table `application` 
        add constraint UK_ao7wxw7e7mkj6g5q49yq2fw8d unique (`ticker`);
-
-    alter table `banner` 
-       add constraint UK_p8qqa0apsb9hsacl8y4mie6m unique (`credit_card_number`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9u3lu85o98y0tro95qasghg8e on `inquiry` (`deadline`);
 create index IDXcaskyi2xiccqj4na2coao5m4o on `investment_round` (`entrepreneur_id`);
