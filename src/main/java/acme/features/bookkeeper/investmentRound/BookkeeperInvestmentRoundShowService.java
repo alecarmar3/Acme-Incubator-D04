@@ -20,6 +20,7 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
+
 		return true;
 	}
 

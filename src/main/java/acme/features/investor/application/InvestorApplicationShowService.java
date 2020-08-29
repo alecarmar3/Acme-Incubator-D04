@@ -1,6 +1,8 @@
 
 package acme.features.investor.application;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,14 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		return true;
+
+		Collection<Application> myApplications = this.repository.findMyApplications(request.getPrincipal().getActiveRoleId());
+
+		Application requested = this.repository.findOneById(request.getModel().getInteger("id"));
+
+		Boolean isMyApplication = myApplications.contains(requested);
+
+		return isMyApplication;
 	}
 
 	@Override
