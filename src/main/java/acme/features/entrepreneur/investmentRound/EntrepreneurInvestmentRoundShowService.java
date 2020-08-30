@@ -20,7 +20,12 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
-		return true;
+
+		InvestmentRound requested = this.repository.findOneById(request.getModel().getInteger("id"));
+
+		Boolean isMine = requested.getEntrepreneur().getId() == request.getPrincipal().getActiveRoleId();
+
+		return isMine;
 	}
 
 	@Override
@@ -40,8 +45,6 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
-
-		result.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(id));
 
 		return result;
 	}

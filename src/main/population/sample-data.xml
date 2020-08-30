@@ -801,7 +801,7 @@
 		<property name="kindOfRound" value="Angel"/>
 		<property name="title" value="Investment round 1"/>
 		<property name="description" value="This is the investment round 1"/>
-		<property name="amountOfMoney" value="4511d"/>
+		<property name="amountOfMoney" value="4511 EUR"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur1"/>
 	</bean>
@@ -812,7 +812,7 @@
 		<property name="kindOfRound" value="Series-C"/>
 		<property name="title" value="Investment round 2"/>
 		<property name="description" value="This is the investment round 2"/>
-		<property name="amountOfMoney" value="6533d"/>
+		<property name="amountOfMoney" value="6533 EUR"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur3"/>
 	</bean>
@@ -823,7 +823,7 @@
 		<property name="kindOfRound" value="SEED"/>
 		<property name="title" value="Investment round 3"/>
 		<property name="description" value="This is the investment round 3"/>
-		<property name="amountOfMoney" value="90050d"/>
+		<property name="amountOfMoney" value="90050 EUR"/>
 		<property name="additionalInfo" value=""/>
 		<property name="entrepreneur" ref="entrepreneur1"/>
 	</bean>

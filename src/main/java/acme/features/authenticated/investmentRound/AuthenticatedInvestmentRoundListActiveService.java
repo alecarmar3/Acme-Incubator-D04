@@ -43,8 +43,6 @@ public class AuthenticatedInvestmentRoundListActiveService implements AbstractLi
 
 		result = this.repository.findActiveInvestmentRounds();
 
-		result.stream().forEach(x -> x.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(x.getId())));
-
 		return result;
 	}
 }

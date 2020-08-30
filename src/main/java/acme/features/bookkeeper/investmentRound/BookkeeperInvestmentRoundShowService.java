@@ -20,6 +20,7 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
+
 		return true;
 	}
 
@@ -40,8 +41,6 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
-
-		result.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(id));
 
 		return result;
 	}

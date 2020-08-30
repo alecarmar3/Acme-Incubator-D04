@@ -47,8 +47,6 @@ public class BookkeeperInvestmentRoundListWrittenService implements AbstractList
 
 		result = this.repository.findWrittenInvestmentRounds(id);
 
-		result.stream().forEach(x -> x.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(x.getId())));
-
 		return result;
 	}
 }

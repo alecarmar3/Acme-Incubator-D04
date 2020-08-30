@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.AccountingRecord;
 import acme.entities.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
@@ -30,6 +31,6 @@ public interface BookkeeperInvestmentRoundRepository extends AbstractRepository 
 	@Query("select ar.investmentRound from AccountingRecord ar where ar.bookkeeper.userAccount.id <> ?1")
 	Collection<InvestmentRound> findNotWrittenInvestmentRounds(int id);
 
-	@Query("select sum(budget.amount) from Activity a where a.investmentRound.id = ?1")
-	Double getBudgetSumOfInvestmentRound(int id);
+	@Query("select ar from AccountingRecord ar where ar.investmentRound.id = ?1")
+	Collection<AccountingRecord> findAccountingRecordsOfInvestmentRound(int id);
 }
