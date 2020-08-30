@@ -48,8 +48,6 @@ public class BookkeeperInvestmentRoundListNotWrittenService implements AbstractL
 		result = this.repository.findAllRounds();
 		result.removeAll(this.repository.findWrittenInvestmentRounds(id));
 
-		result.stream().forEach(x -> x.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(x.getId())));
-
 		return result;
 	}
 }

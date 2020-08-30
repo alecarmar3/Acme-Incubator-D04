@@ -41,8 +41,6 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
 
-		result.setAmountOfMoney(this.repository.getBudgetSumOfInvestmentRound(id));
-
 		return result;
 	}
 

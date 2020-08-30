@@ -23,7 +23,4 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 
 	@Query("select ir from InvestmentRound ir")
 	Collection<InvestmentRound> findAllRounds();
-
-	@Query("select sum(budget.amount) from Activity a where a.investmentRound.id = ?1")
-	Double getBudgetSumOfInvestmentRound(int id);
 }
