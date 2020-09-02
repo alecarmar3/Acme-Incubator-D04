@@ -43,6 +43,10 @@
        drop 
        foreign key FK_r6tqltqvrlh1cyy8rsj5pev1q;
 
+    alter table `forum` 
+       drop 
+       foreign key `FKq8ggcjgl5by5gf6l5bji632hu`;
+
     alter table `investment_round` 
        drop 
        foreign key `FKkj1l8c2ftn9c65y061me6t37j`;
@@ -53,7 +57,7 @@
 
     alter table `message` 
        drop 
-       foreign key `FKc4w1gj5ff1rob521gutst6l2r`;
+       foreign key `FKfwwpivgx5j4vw4594dgrw884q`;
 
     alter table `provider` 
        drop 
@@ -84,6 +88,8 @@
     drop table if exists `consumer`;
 
     drop table if exists `entrepreneur`;
+
+    drop table if exists `forum`;
 
     drop table if exists `inquiry`;
 

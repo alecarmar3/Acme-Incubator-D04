@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.roles.Entrepreneur;
@@ -52,9 +53,11 @@ public class InvestmentRound extends DomainEntity {
 	private String				kindOfRound; //SEED, ANGEL, SERIES-A, SERIES-B, SERIES-C, BRIDGE
 
 	@NotBlank
+	@Length(max = 250)
 	private String				title;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				description;
 
 	@NotNull
@@ -62,6 +65,7 @@ public class InvestmentRound extends DomainEntity {
 	private Money				amountOfMoney;
 
 	@URL
+	@Length(max = 250)
 	private String				additionalInfo;
 
 	@NotNull

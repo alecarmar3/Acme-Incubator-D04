@@ -143,6 +143,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `forum` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_date` datetime(6),
+        `title` varchar(255),
+        `investment_round_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `inquiry` (
        `id` integer not null,
         `version` integer not null,
@@ -191,7 +200,7 @@
         `creation_date` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `investment_round_id` integer not null,
+        `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -323,7 +332,6 @@ create index IDXcaskyi2xiccqj4na2coao5m4o on `investment_round` (`entrepreneur_i
 
     alter table `investment_round` 
        add constraint UK_408l1ohatdkkut5bkt0eu6ifs unique (`ticker`);
-create index IDXbeg6sje8j6vxxen08e9tv15br on `message` (`investment_round_id`);
 create index IDXrcpel5hblr62lfjr9gmpk2wgi on `notice` (`deadline`);
 create index IDX3ianip0mmnj1316lpeas2yw71 on `overture` (`deadline`);
 
@@ -385,6 +393,11 @@ create index IDX3ianip0mmnj1316lpeas2yw71 on `overture` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `forum` 
+       add constraint `FKq8ggcjgl5by5gf6l5bji632hu` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
+
     alter table `investment_round` 
        add constraint `FKkj1l8c2ftn9c65y061me6t37j` 
        foreign key (`entrepreneur_id`) 
@@ -396,9 +409,9 @@ create index IDX3ianip0mmnj1316lpeas2yw71 on `overture` (`deadline`);
        references `user_account` (`id`);
 
     alter table `message` 
-       add constraint `FKc4w1gj5ff1rob521gutst6l2r` 
-       foreign key (`investment_round_id`) 
-       references `investment_round` (`id`);
+       add constraint `FKfwwpivgx5j4vw4594dgrw884q` 
+       foreign key (`forum_id`) 
+       references `forum` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
